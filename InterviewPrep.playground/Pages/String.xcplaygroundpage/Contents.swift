@@ -55,3 +55,5 @@ totalConst = greeting.filter { $0.isLetter && !vowels.contains($0) }.count
 print("Total vowel :\(vowelsCount)")
 print("Total Const :\(totalConst)")
 print("Total Alphabets :\(totalAlphabets1.count)")
+
+

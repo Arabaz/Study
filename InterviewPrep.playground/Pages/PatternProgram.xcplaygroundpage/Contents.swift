@@ -86,3 +86,17 @@ for i in 0..<n {
     
     print()
 }
+
+//⭐ 7. Diamond Pattern
+/*
+   *
+  * *
+ * * *
+  * *
+   *
+*/
+
+for i in 0..<5{
+    print(i)
+    
+}
