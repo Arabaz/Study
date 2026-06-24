@@ -43,3 +43,14 @@ var x2 = 20
 swap(a1: &x1, b1: &x2)
 print(x1, x2)
 
+
+func swapTwoValue<T>(a1: inout T, a2: inout T){
+    let temp = a1
+    a1 = a2
+    a2 = temp
+}
+
+var a1 = "10B"
+var a2 = "20A"
+swapTwoValue(a1: &a1, a2: &a2)
+print(a1, a2)
