@@ -86,8 +86,8 @@ for i in 0..<n {
     
     print()
 }
-
-//⭐ 7. Diamond Pattern
+print("-----")
+//MARK: ⭐ 7. Diamond Pattern
 /*
    *
   * *
@@ -96,7 +96,53 @@ for i in 0..<n {
    *
 */
 
-for i in 0..<5{
-    print(i)
+let n1 = 5
+for i in 0..<n1{
     
+    if i < n1/2 {
+        for _ in i..<(n1/2){
+            print(" ", terminator: "")
+        }
+        for _ in 0..<i + 1{
+            print("*", terminator: " ")
+        }
+        print()
+    } else if i > n1/2 {
+        for _ in 0..<i / 2{
+            print(" ", terminator: "")
+        }
+        
+        for _ in 0..<n1 - i{
+            print("*", terminator: " ")
+        }
+        print()
+        
+    } else {
+        for _ in 0..<i + 1{
+            print("*", terminator: " ")
+        }
+        print()
+    }
+}
+
+print("- - - - -")
+for i in 0..<n1 {
+    var stars: Int = 0
+    var space: Int = 0
+    
+    if i <= n/2 {
+        stars = i + 1
+        space = (n1 / 2) - i
+    } else {
+        stars = n1 - i
+        space = i - (n1/2)
+    }
+    
+    for _ in 0..<space{
+        print(" ", terminator: "")
+    }
+    for _ in 0..<stars {
+        print("*", terminator: " ")
+    }
+    print()
 }
