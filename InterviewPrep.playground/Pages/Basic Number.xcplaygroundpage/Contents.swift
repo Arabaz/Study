@@ -43,6 +43,8 @@ if revNumb == numb{
 }
 */
 
+
+/*
 //MARK: Armstrong number
 var numb = 153
 var temp = numb
@@ -71,24 +73,33 @@ if add == numb {
 } else {
     print("Not armstrong")
 }
+*/
 
+//MARK: Fibonacci series
+var a = 0
+var b = 1
+var total = 8
+//print(a, b, terminator: " ")
+//while total - 2 > 0{
+//    let c = a + b
+//    print(c, terminator: " ")
+//    a = b
+//    b = c
+//    total -= 1
+//}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+for i in 0..<total{
+    if i == 0{
+        print(a, terminator: " ")
+    } else if i == 1{
+        print(b, terminator: " ")
+    } else {
+        let c = a + b
+        print(c, terminator: " ")
+        a = b
+        b = c
+    }
+}
 
 
 
