@@ -33,6 +33,22 @@ while index < arr.count {
 print(arr)
 
 
+var arr4 = [1,0,1,0,5,3,0,4,0,5]
+//op [1,1,5,3,4,5,0,0,0,0]
+var zeros = 0
+for i in 0..<arr4.count {
+    if arr4[i] != 0{
+        arr4[i - zeros] = arr4[i]
+    } else {
+        zeros += 1
+    }
+}
+for i in (arr4.count - zeros)..<arr4.count {
+    arr4[i] = 0
+}
+print(arr4)
+
+
 //MARK: How to find unique number in array
 let arr1 = [1, 1, 2, 2, 3, 4, 4, 5, 5, 4, 3, 9, 3, 6, 7,0]
 var frequency: [Int:Int] = [:]
