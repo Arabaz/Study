@@ -17,21 +17,15 @@ res.append(contentsOf: Array(repeating: 0, count: zeroCount))
 print(res)
 
 
+arr = [0,1,0,1,0,5,3,0,4,0,5]
 var index = 0
-
 for i in 0..<arr.count {
     if arr[i] != 0{
-        arr[index] = arr[i]
+        arr.swapAt(i, index)
         index += 1
     }
 }
-
-while index < arr.count {
-    arr[index] = 0
-    index += 1
-}
 print(arr)
-
 
 var arr4 = [1,0,1,0,5,3,0,4,0,5]
 //op [1,1,5,3,4,5,0,0,0,0]
@@ -68,6 +62,26 @@ for i in frequency{
 let uniqueNumbers = frequency.filter { $0.value == 1 }.map { $0.key }.sorted()
 print("uniqueNumbers:\(uniqueNumbers)")
 
+//Second
+var dict: [Int:Int] = [:]
+var uniqueArr = [Int]()
+
+for i in 0..<arr1.count {
+    if let count = dict[arr1[i]] {
+        dict[arr1[i]] = count + 1
+    } else {
+        dict[arr1[i]] = 1
+    }
+}
+for int in arr1 {
+    if dict[int] == 1{
+        uniqueArr.append(int)
+    }
+}
+
+print(uniqueArr)
+
+
 //MARK: How to reverse array
 print("--------------------- reverse array ")
 var arr2 = [1, 2, 1, 4, 5, 6, 7]
@@ -87,6 +101,17 @@ for i in stride(from: arr2.count - 1, through: 0, by: -1) {
 }
 print("Reverse array", rev)
 
+//Second
+arr2 = [1, 2, 1, 4, 5, 6, 7]
+var first = 0
+var last = arr2.count - 1
+while last > first {
+    arr2.swapAt(last, first)
+    first += 1
+    last -= 1
+}
+print(arr2)
+
 
 //MARK: Sort array
 print("--------------------- sort array ---------------------")
@@ -95,10 +120,13 @@ var arr3 = [23,54,34,76,34,33,54,35]
 for i in 0..<arr3.count {
     for j in i..<arr3.count {
         if arr3[i] > arr3[j] {
-            var temp = arr3[i]
-            arr3[i] = arr3[j]
-            arr3[j] = temp
+            arr3.swapAt(i, j)
         }
+//        if arr3[i] > arr3[j] {
+//            var temp = arr3[i]
+//            arr3[i] = arr3[j]
+//            arr3[j] = temp
+//        }
     }
 }
 print(arr3)
